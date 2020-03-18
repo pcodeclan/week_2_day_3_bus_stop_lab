@@ -16,13 +16,9 @@ class TestPerson < Minitest::Test
   #testing methods which will return PASS
   def test_person_name()
     assert_equal("Barry",@person1.name())
-    assert_equal("Julie",@person2.name())
-    assert_equal("Kovak",@person3.name())
   end
 
   def test_person_age()
     assert_equal(35,@person1.age())
-    assert_equal(22,@person2.age())
-    assert_equal(55,@person3.age())
   end
 end
