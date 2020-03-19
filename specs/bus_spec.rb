@@ -40,14 +40,14 @@ class TestBus < Minitest::Test
     @bus1.drop_off_passenger(@passenger2)
     assert_equal(1, @bus1.passenger_count())
   end
-
+  #tests the empty_bus method so adds passengers to the array before emptying them.
   def test_empty_bus()
     @bus1.pick_up_passenger(@passenger1)
     @bus1.pick_up_passenger(@passenger2)
     @bus1.empty_bus()
     assert_equal(0, @bus1.passenger_count())
   end
-
+  #Test which ceates new Busstop. Adds person to queue, subtracts 1 from bustop queue, adds 1 to bus passenger count and empties queue
   def test_pick_up_from_stop()
     @stop = BusStop.new("Queen Street")
     @stop.add_to_queue(@passenger1)

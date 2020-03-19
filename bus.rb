@@ -34,14 +34,14 @@ class Bus
   def drop_off_passenger(passenger)
     @passengers.delete(passenger)
   end
-
+  #Empties the entire array of passengers
   def empty_bus()
     @passengers.clear()
   end
 
   def pick_up_from_stop(stop)
     for person in stop.queue()
-      pick_up_passenger(person)
+      p "The following persons got on the bus" + pick_up_passenger(person).to_s
     end
     stop.clear_queue()
   end

@@ -1,5 +1,5 @@
 class BusStop
-
+  #Attr shortcut for getter
   attr_reader :name, :queue
 
   def initialize(name)
